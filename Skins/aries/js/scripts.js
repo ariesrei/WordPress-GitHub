@@ -99,7 +99,7 @@
 
       	$('.pagepiling').pagepiling({
     		scrollingSpeed: 280,
-		    loopBottom: false,
+		    loopBottom:false,
 		    anchors: ['introduction', 'what-i-do', 'featured-works', 'services', 'experience', 'testimonials', 'contacts'],
 		    afterLoad: function(anchorLink, index){
 	            if ( $('.pp-section.active').scrollTop() > 0 ){
@@ -162,5 +162,36 @@
     	$('.bg-changer .section-bg').removeClass('active').eq(index).addClass('active');
     });
 
+
+
+	/*-------------------------------------------------------------------------------
+	  Ajax Forms
+	-------------------------------------------------------------------------------*/
+
+
+
+	if ($('.js-form').length) {
+		$('.js-form').each(function(){
+			$(this).validate({
+				errorClass: 'error wobble-error',
+			    submitHandler: function(form){
+		        	$.ajax({
+			            type: "POST",
+			            url:"mail.php",
+			            data: $(form).serialize(),
+			            success: function() {
+			            	$('#error').modal('hide');
+		                	$('#success').modal('show');
+		                },
+
+		                error: function(){
+		                	$('#success').modal('hide');
+			                $('#error').modal('show');
+			            }
+			        });
+			    }
+			});
+		});
+	}
 
 })(jQuery);

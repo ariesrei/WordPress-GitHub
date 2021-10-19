@@ -75,8 +75,15 @@ input[type=submit], button {
 }
 /*---:[ custom CSS ]:---*/
 .progress-bars {
-	margin-top: 40px !important;
+	margin-top: 0 !important;
 }	
+.progress-bars br,
+.row-project-box p,
+.row-project-box br,
+.service-list br,
+.service-list p {
+	display: none;
+}
 .col-project-box {
 	display: inline;
 }

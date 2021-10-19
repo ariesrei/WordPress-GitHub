@@ -44,6 +44,20 @@ body{
     color:#fff;
 }
 
+
+
+/* 1.2 Typography */
+
+
+
+@font-face {
+  font-family: 'Poppins';
+  src: url('../fonts/poppins-regular-webfont.woff2') format('woff2'),
+       url('../fonts/poppins-regular-webfont.woff') format('woff');
+  font-weight: 400;
+  font-style: normal;
+}
+
 h1,
 .h1{ 
   font-weight: 700;

@@ -16,7 +16,7 @@ function custom_modular_content_fn($atts) {
 
  		if(!empty($atts['id'])) :
 
- 			if($atts['id'] == 8) :
+ 			if($atts['id'] == 8 || $atts['id'] == 7) :
 				$image = get_field('background_image', $atts['id']);
 				echo '<div class="section-bg" style="background-image:url('.$image['url'].');"></div>
 				<div class="scrollable-content">

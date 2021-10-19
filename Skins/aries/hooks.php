@@ -78,7 +78,7 @@ function custom_hook_header() {
 	</button>
 
 	<a class="brand" href="<?=site_url()?>">
-		<img class="brand-img" alt="" src="https://ariesm.site/wp-content/thesis/skins/aries/images/brand.png">
+		<img class="brand-img" alt="" src="<?=site_url()?>/wp-content/thesis/skins/aries/images/brand.png">
 		<div class="brand-info">
 			<div class="brand-name"><?=get_bloginfo('name')?></div>
 			<div class="brand-text"><?=get_bloginfo('description')?></div>

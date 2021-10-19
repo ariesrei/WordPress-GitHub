@@ -13,6 +13,12 @@ include_once "assets.php";
 include_once "hooks.php";
 include_once "shortcodes.php";
 
+add_action('wp_enqueue_scripts', function() {
+    wp_enqueue_script('main', THESIS_USER_URL.'/skins/aries/assets/dist/main.bundle.js', [], '1.0.0', true );
+    wp_enqueue_style('main', THESIS_USER_URL.'/skins/aries/assets/dist/main.css', [], '1.0.0', 'all' );
+});
+
+
 
 // Fully Disable Gutenberg editor.
 add_filter('use_block_editor_for_post_type', '__return_false', 10);
