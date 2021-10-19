@@ -1,0 +1,82 @@
+/*---:[ Thesis CSS reset ]:---*/
+* {
+	margin: 0;
+	padding: 0;
+	word-break: break-word;
+}
+html {
+	-webkit-text-size-adjust: 100%;
+	-ms-text-size-adjust: 100%;
+}
+h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img, fieldset {
+	border: 0;
+}
+abbr, acronym {
+	text-decoration: none;
+}
+code {
+	line-height: 1em;
+}
+pre {
+	overflow: auto;
+	word-wrap: normal;
+	-moz-tab-size: 4;
+	tab-size: 4;
+}
+sub, sup {
+	line-height: 0.5em;
+}
+img, .wp-caption {
+	max-width: 100%;
+	height: auto;
+}
+iframe, video, embed, object {
+	display: block;
+	max-width: 100%;
+}
+img {
+	display: block;
+}
+.left, .alignleft, img[align=left] {
+	display: block;
+	float: left;
+}
+.right, .alignright, img[align=right] {
+	display: block;
+	float: right;
+}
+.center, .aligncenter, img[align=middle] {
+	display: block;
+	float: none;
+	text-align: center;
+	margin-right: auto;
+	margin-left: auto;
+}
+.clear {
+	clear: both;
+}
+input[type=submit], button {
+	cursor: pointer;
+	overflow: visible;
+	-webkit-appearance: none;
+}
+.wp-smiley {
+	display: inline;
+}
+#thesis_launcher {
+	display: none;
+}
+/*---:[ custom CSS ]:---*/
+.progress-bars {
+	margin-top: 40px !important;
+}	
+.col-project-box {
+	display: inline;
+}
