@@ -1,5 +1,6 @@
 import 'jquery';
-import './js/bootstrap.min';
+import 'bootstrap';
+
 import './js/smoothscroll';
 import './js/jquery.pagepiling';
 import './js/jquery.validate.min';

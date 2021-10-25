@@ -682,11 +682,7 @@ a.brand:focus{
   box-shadow: 0 0 25px rgba(0,0,0,0.07);
 }
 
-
-/* 2.3 Sidebar menu */
-
-
-
+ 
 .click-capture{
   position: fixed;
   top: 0;
@@ -773,7 +769,6 @@ a.brand:focus{
   overflow-x:hidden;
   overflow-y:auto;
   -webkit-overflow-scrolling:touch;
-  overflow-scrolling:touch;
   font-weight: 600;
   letter-spacing: -0.025rem;
   list-style: none;
@@ -2898,8 +2893,6 @@ a.brand:focus{
 }
 
 .post-thumbnail{
-  background: url(../images/news/1-1920x1080.jpg) 50%  no-repeat;
-  background-size:cover;
   padding: 16.4rem 15px 19rem;
 }
 
@@ -3295,8 +3288,6 @@ a.brand:focus{
 .content-entry-image{
   padding-top: 38%;
   min-height: 28rem;
-  background: url(../images/1-1920x800.jpg) 50%;
-  background-size: cover;
 }
 
 

@@ -14,8 +14,8 @@ include_once "hooks.php";
 include_once "shortcodes.php";
 
 add_action('wp_enqueue_scripts', function() {
-    wp_enqueue_script('main', THESIS_USER_URL.'/skins/aries/assets/dist/main.bundle.js', [], '1.0.0', true );
-    wp_enqueue_style('main', THESIS_USER_URL.'/skins/aries/assets/dist/main.css', [], '1.0.0', 'all' );
+    wp_enqueue_script('main', THESIS_USER_URL.'/skins/aries/assets/dist/main.min.js', [], '1.0.0', true );
+    wp_enqueue_style('main', THESIS_USER_URL.'/skins/aries/assets/dist/main.min.css', [], '1.0.0', 'all' );
 });
 
 
@@ -31,24 +31,12 @@ function remove_block_css() {
    wp_dequeue_style( 'storefront-gutenberg-blocks' ); // Storefront theme
 }
 
-/** 
- * Removes empty paragraph tags from shortcodes in WordPress.
- */
-function tg_remove_empty_paragraph_tags_from_shortcodes_wordpress( $content ) {
-    $toFix = array( 
-        '<p>['    => '[', 
-        ']</p>'   => ']', 
-        ']<br />' => ']'
-    ); 
-    return strtr( $content, $toFix );
-}
-add_filter( 'the_content', 'tg_remove_empty_paragraph_tags_from_shortcodes_wordpress' );
+// Prevent WP from adding <p> tags on all post types
+add_filter( 'the_content', function( $content) {
 
+    remove_filter( 'the_content', 'wpautop' );
+    remove_filter( 'the_excerpt', 'wpautop' );
+    return $content;
+}, 0 );
 
-function the_content_filter($content) {
-    $block = join("|",array("custom_modular_content", "skills", "works-bg","works","services"));
-    $rep = preg_replace("/(<p>)?\[($block)(\s[^\]]+)?\](<\/p>|<br \/>)?/","[$2$3]",$content);
-    $rep = preg_replace("/(<p>)?\[\/($block)](<\/p>|<br \/>)?/","[/$2]",$rep);
-return $rep;
-}
-add_filter("the_content", "the_content_filter");
+ 

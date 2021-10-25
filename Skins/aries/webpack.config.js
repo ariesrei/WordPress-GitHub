@@ -1,16 +1,12 @@
-const path = require('path');
- 
-var webpack = require('webpack');
+const path =                        require('path');
+const webpack =                     require('webpack');
+const MiniCssExtractPlugin =        require("mini-css-extract-plugin");
+const ExtractTextPlugin =           require('extract-text-webpack-plugin');
+const PurifyCSSPlugin =             require('purifycss-webpack');
 
-const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
 module.exports = {
-    mode: "development",
     context: path.resolve(__dirname, "assets"),
-    output: {
-        filename: 'main.bundle.js',
-        path: path.resolve(__dirname,"assets/dist")
-    },
     plugins: [
         new MiniCssExtractPlugin(),
         new webpack.ProvidePlugin({
