@@ -1,0 +1,18 @@
+/*
+Copyright 2012 DIYthemes, LLC. Patent pending. All rights reserved.
+License: DIYthemes Software License Agreement
+License URI: https://diythemes.com/thesis/rtfm/software-license-agreement/
+*/
+.form-field .tiny { width: 50px !important; }
+.form-field .short { width: 120px !important; }
+.form-field .medium { width: 200px !important; }
+.form-field .long { width: 400px !important; }
+.form-field textarea, .form-field .count_field { display: block; }
+.form-field .form-list { margin: 0; }
+.form-field .form-list input { width: auto; }
+.form-field .form-list label { display: inline; color: #666; }
+.form-field .counter { width: auto !important; margin-top: 3px; margin-left: 0; text-align: center; }
+.form-field input + .counter { margin-left: 1px; }
+.form-field .counter_label { font-size: 12px; line-height: 20px; display: inline; color: #666; vertical-align: baseline; }
+.edit-tags-php .form-field .counter { float: left; margin-right: 6px; }
+.edit-tags-php .form-field .counter + label { display: block; color: #666 !important; }
