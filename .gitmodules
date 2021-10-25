@@ -1,3 +1,6 @@
 [submodule "Themes/Thesis"]
 	path = Themes/Thesis
 	url = https://github.com/ariesrei/Thesis
+[submodule "Plugins/web-optimization"]
+	path = Plugins/web-optimization
+	url = https://github.com/ariesrei/web-optimization
